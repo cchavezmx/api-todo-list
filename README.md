@@ -27,31 +27,31 @@ BACKEND EN EXPREESS + MONGODB PARA TODO LIST,
 <!-- USAGE EXAMPLES -->
 ## Rutas
 
-// crear tarea dia 
+### crear tarea dia 
 router.post('/api/v1/insert/event')
 
-// todas las tareas
+### todas las tareas
 router.get('/api/v1/allevents')
 
-// todas las tareas por usuario 
+### todas las tareas por usuario 
 router.get('/api/v1/events/:userID')
 
-// todas las tareas terminadas por usuario 
+### todas las tareas terminadas por usuario 
 router.get('/api/v1/eventsterminados/:userID')
 
-// get events responsable
+### get events responsable
 router.get('/api/v1/sharetask/:userID')
 
-// todos los usuario para asignacion
+### todos los usuario para asignacion
 router.get('/api/v1/alluser/')
 
-// modificar evento
+### modificar evento
 router.patch('/api/v1/updatenota/:notaId')
 
-// cancelar evento
+### cancelar evento
 router.patch('/api/v1/cancelarevento/:notaId')
 
-// get user por id 
+### get user por id 
 router.get('/api/v1/getoneuser/:userID')
 
 
