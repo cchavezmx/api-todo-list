@@ -27,28 +27,32 @@ BACKEND EN EXPREESS + MONGODB PARA TODO LIST,
 <!-- USAGE EXAMPLES -->
 ## Rutas
 
- #Crear evento
-  1. 
-    ruta: localhost:3000/api/v1/insert/event
-    tipo: POST
+// crear tarea dia 
+router.post('/api/v1/insert/event')
 
-``` json
+// todas las tareas
+router.get('/api/v1/allevents')
 
-  // Respuesta 
+// todas las tareas por usuario 
+router.get('/api/v1/events/:userID')
 
-  {
-    "message": {
-        "isActive": true,
-        "subject": "Prueba",
-        "description": "Test de prueba",
-        "date": "2021-09-23T05:44:34.709Z",
-        "creator": "Yo merengues",
-        "responsables": [],
-        "_id": "614c1447c190f90ba76021ef",
-        "createdAt": "2021-09-23T05:44:39.602Z",
-        "updatedAt": "2021-09-23T05:44:39.602Z",
-        "__v": 0
-    }
-}
-```
+// todas las tareas terminadas por usuario 
+router.get('/api/v1/eventsterminados/:userID')
+
+// get events responsable
+router.get('/api/v1/sharetask/:userID')
+
+// todos los usuario para asignacion
+router.get('/api/v1/alluser/')
+
+// modificar evento
+router.patch('/api/v1/updatenota/:notaId')
+
+// cancelar evento
+router.patch('/api/v1/cancelarevento/:notaId')
+
+// get user por id 
+router.get('/api/v1/getoneuser/:userID')
+
+
 
