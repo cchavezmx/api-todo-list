@@ -9,14 +9,14 @@ module.exports = {
     .aggregate()
     .match({ creator: Types.ObjectId(userID) })
     .match({ isActive: true })
-    .sort({ date: -1})
+    .sort({ date: 1})
   },
   sharetask: async(userID) => {
     return await Event
     .aggregate()
     .match({ responsables: Types.ObjectId(userID) })
     .match({ isActive: true })
-    .sort({ date: -1})
+    .sort({ date: 1})
   },
   eventosTerminados: async(userID) => {
     return await Event
