@@ -15,17 +15,15 @@ const EventSchema = new Schema({
     type: String,
   },
   date: {
-    type: Date, 
-    default: Date.now()
+    type: Date
   },
   creator: {
-    type: String,
-    default: true,
-    required: false
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users'
   },
   responsables: {
-    type: Array,
-    required: false
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users'
   }
 }, { timestamps: true })
 
